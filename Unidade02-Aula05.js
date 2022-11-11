@@ -5,7 +5,7 @@
 const salaDePython = ['Melissa', 'Helena', 'Rodrigo'];
 const salaDeJavaScript = ['Ju', 'Leo', 'Raquel'];
 
-const salasUnificadas = salaDePython.concat(salaDeJavaScript); // O .concat() não altera a lista original...
+const salasUnificadas = salaDePython.concat(salaDeJavaScript); // O .concat() não altera a lista original... Por isso, atribuímos uma nova variável pra "concatenar" as listas A + B. 
 console.log(salasUnificadas);
 console.log(salaDePython);
 console.log(salaDeJavaScript);
