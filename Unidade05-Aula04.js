@@ -7,17 +7,23 @@ const salaJava = [6, 5, 8, 9, 5, 6]
 const salaPython = [7, 3.5, 8, 9.5]
 
 function mediaSala(notasDaSala){
-    
+    const somaDasNotas = notasDaSala.reduce((acum, atual) => atual + acum, 0)
+    return somaDasNotas/notasDaSala.length 
 }
 
-// function mediaSala(notasDaSala){
-//     const somaDasNotas = notasDaSala.reduce((acum, atual) => atual + acum,0)
-//     return somaDasNotas/notasDaSala.lenght
-// }
-// 
-// console.log(`A média da sala de JavaScript é: ${mediaSala(salaJS)}`)
-// console.log(`A média da sala de Java é: ${mediaSala(salaJava)}`)
-// console.log(`A média da sala de Python é: ${mediaSala(salaPython)}`)
+// O método .reduce(acum, atual) vai reduzir todos os valores de um array para um único valor numérico... Sempre usamos 2 parâmetros, o acumulador e o valor atual (que vai ser cada iteração do loop, 7, 8, 8, etc...) do elemento que está sendo reduzido. O segundo parâmetro é uma soma, sendo o valor acumulado, tipo a let soma = 0, passando como parâmetro pra começar a contagem, no caso, cada vez que uma array foi iterada, item a item, o método reduce foi SOMANDO o (acum)ulado, e depois no bloco de retorno, a somaDasNotas (acumuladas pela iteração do loop) vai ser dividida pelo tamanho da array .length, assim dando a média.
+
+console.log(`A média da sala de JavaScript é ${mediaSala(salaJS)}`)
+console.log(`A média da sala de JavaScript é ${mediaSala(salaJava)}`)
+console.log(`A média da sala de JavaScript é ${mediaSala(salaPython)}`)
+
+// DESAFIO DA AULA LÁ DO COMEÇO COM AS MÉDIAS HARD-CODED.
+
+const notas = [10, 6.5, 8, 7];
+const media = notas.reduce((acumulado, atual) => atual + acumulado, 0) / notas.length
+
+console.log(media);
+console.log(media.toFixed(2));
 
 /*
 Transcrição
